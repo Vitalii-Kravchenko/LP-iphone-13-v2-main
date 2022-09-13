@@ -1,0 +1,127 @@
+.footer
+  position: relative
+  background: url('../img/header/background.jpg') no-repeat left / cover
+  &__container
+    position: relative
+    padding-top: 51px
+    padding-bottom: 190px
+    display: flex
+    flex-direction: column
+    align-items: center
+  &__iphone
+    &-1
+      position: absolute
+      bottom: -350px
+      left: -123px
+      width: 515px
+    &-2
+      position: absolute
+      bottom: 50px
+      right: -60px
+      width: 305px
+  &-nav
+    display: flex
+    align-items: center
+    justify-content: space-between
+    width: 100%
+    &__wrapper
+      display: flex
+      align-items: center
+      &-link
+        margin: 0 40px
+        +S(18px)
+        color: #fff
+        &:first-child
+          margin-left: 0
+        &:last-child
+          margin-right: 0
+  &-name
+    margin-top: 29px
+    display: flex
+    align-items: baseline
+    &__img
+      margin-right: 20px
+      width: 30px
+      height: 34px
+      fill: #fff
+    &__text
+      margin: 0
+      +S(36px)
+      font-weight: 600
+      color: #fff
+  &-title
+    position: relative
+    margin-top: 20px
+    padding-top: 23px
+    padding-bottom: 24px
+    max-width: 627px
+    width: 100%
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      left: 50%
+      transform: translateX(-50%)
+      width: 100vw
+      height: 1px
+      background-color: #fff
+      opacity: 0.3
+    &::after
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 50%
+      transform: translateX(-50%)
+      width: 100vw
+      height: 1px
+      background-color: #fff
+      opacity: 0.3
+    &__text
+      margin: 0
+      +S(62px)
+      color: #fff
+      font-weight: 600
+      text-align: center
+      text-transform: uppercase
+  &-subtitle
+    margin-top: 26px
+    display: flex
+    flex-direction: column
+    align-items: center
+    max-width: 283px 
+    width: 100%
+    &__text
+      +Text
+  &-price
+    margin-top: 40px
+    display: flex
+    flex-direction: column
+    align-items: center
+    max-width: 236px
+    width: 100%
+    &__text
+      +Text
+    &__item
+      &--new
+        margin-top: 5px
+        +S(36px)
+        font-weight: 500
+        color: #E94360
+      &--old
+        position: relative
+        margin-top: 2px
+        +S(18px)
+        color: #fff
+        &::after
+          content: ''
+          position: absolute
+          top: 55%
+          left: -2px
+          right: -3px
+          transform: translateY(-50%)
+          height: 1px
+          background-color: #E94360
+  &__button
+    margin-top: 30px
+  &__sale
+    margin-top: 16px

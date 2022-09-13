@@ -1,0 +1,26 @@
+{
+  "devDependencies": {
+    "autoprefixer": "^10.0.0",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^9.0.0",
+    "gulp-pxtorem": "^3.0.0",
+    "gulp-sass": "^4.1.1",
+    "gulp-watch": "^5.0.1",
+    "node-sass": "^4.14.1",
+    "normalize.css": "^8.0.1",
+    "postcss": "^8.1.10",
+    "sass": "^1.41.1"
+  },
+  "scripts": {
+    "start": "npm-run-all --parallel liveserver watch",
+    "liveserver": "live-server",
+    "watch": "node-sass sass/style.sass css/style.css -w"
+  },
+  "browserslist": [
+    "last 10 version",
+    ">= 0.02%",
+    "not Firefox < 28",
+    "not Chrome < 21",
+    "not dead"
+  ]
+}

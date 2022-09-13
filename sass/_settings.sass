@@ -1,0 +1,274 @@
+*
+  box-sizing: border-box
+
+select
+  -moz-appearance: none
+  -webkit-appearance: none
+
+select::-ms-value
+  background: none
+
+select::-ms-expand
+  display: none
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button
+  -webkit-appearance: none
+  margin: 0
+
+/* Firefox */
+input[type=number]
+  -moz-appearance: textfield
+
+a
+  text-decoration: none
+  color: inherit
+  font-family: inherit
+  border: none
+  outline: none
+  -webkit-tap-highlight-color: transparent
+  &:active
+    outline: none
+    border: none
+
+button
+  font-family: inherit
+  color: inherit
+  outline: none
+  border: none
+  background: none
+  cursor: pointer
+  -webkit-tap-highlight-color: transparent
+
+input
+  font-family: inherit
+  color: inherit
+  background: none
+  border: none
+  outline: none
+  -webkit-appearance: none
+  &::placeholder
+    opacity: 1
+  &::placeholder
+    color: inherit
+    opacity: 1
+  &:invalid
+    box-shadow: none
+
+img
+  width: 100%
+  user-select: none
+  -moz-user-select: none
+  -ms-user-select: none !important
+  -webkit-user-select: none !important
+
+select::-ms-expand
+  display: none
+
+input::-ms-clear
+  width: 15px
+  height: 15px
+
+table
+  border-collapse: collapse
+
+.size-table-wrapper
+  +S(20px)
+  position: relative
+  background-color: #d6e8ff
+  padding: 25px
+  width: auto
+  max-width: 740px
+  margin: 0 auto
+
+.size-table 
+  font-size: 20px
+  color: #000
+  text-align: center
+
+.size-table thead th 
+  padding: 8px 10px
+  border-bottom: 1px solid #000
+  color: #000
+
+.size-table thead th:nth-child(2) 
+  border-left: 1px solid #000
+
+.size-table tbody tr 
+  margin-bottom: 6px
+
+.size-table tbody tr:nth-of-type(even) td 
+  background-color: #c3d8f3
+
+.size-table tbody td 
+  width: 18.625%
+  padding: 20px
+
+.size-table tbody td:first-child 
+  width: 25.5%
+  padding-left: 0
+  color: #000
+  border-right: 1px solid #000
+  text-align: left
+
+.feedback-modal
+  padding: 30px 30px
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  max-width: 750px
+  width: 100%
+  min-height: 420px
+  background-color: #fff
+  border: 1px solid #000
+  &__wrapper
+    display: flex
+    align-items: center
+    flex-wrap: wrap-reverse
+  &__input
+    margin-right: 30px
+    padding: 15px 17px
+    +S(16px)
+    color: #000
+    border: 1px solid #684CBA
+    &::placeholder
+      +S(16px)
+      color: #888888
+      opacity: 0.7
+  &__text
+    margin-top: 20px
+    margin-bottom: 20px
+    padding: 15px 20px
+    width: 100%
+    height: 200px
+    +S(16px)
+    color: #000
+    border: 1px solid #684CBA
+    outline: none
+    &::placeholder
+      +S(16px)
+      color: #888888
+      opacity: 0.7
+    &-wrapper
+      width: 100%
+  &__button
+    padding: 15px 20px
+    +S(16px)
+    min-width: 200px
+    background: #684CBA
+    color: #fff
+  &__dialog
+    &-review
+      margin: 20px 0
+      display: flex
+      align-items: center
+      height: 20px
+    &-score
+      margin-right: 10px
+      +S(20px)
+      font-weight: normal
+      color: #000
+    &-raiting
+      display: flex
+    &-star
+      margin: 0 1.5px
+      width: 18px
+      height: 18px
+      cursor: pointer
+      &--active
+        background-image: url(../img/star.svg)
+
+.feedback-modal
+  &__thanks
+    padding: 30px 40px
+    &-description
+      margin: 0
+      +S(16px)
+      font-weight: normal
+      color: #000
+
+.policy
+  max-width: 800px
+  &__text
+    +S(14px)
+    line-height: 26px
+    color: #000
+
+.info
+  position: absolute
+  bottom: 0
+  left: 50%
+  transform: translateX(-50%)
+  width: 100vw
+  background-color: rgba(0, 0, 0, 0.3)
+  &__container
+    display: flex
+    justify-content: center
+    align-items: center
+    min-height: 48px
+    z-index: 10
+  &__wrapper
+    padding-top: 11px
+    padding-bottom: 13px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    flex-wrap: wrap
+    max-width: 974px
+    width: 100%
+  &__text
+    +S(14px)
+    color: #999999
+    text-align: center
+
+.overflow
+  overflow: hidden
+
+.container
+  margin: 0 auto
+  padding: 0 15px
+  max-width: 1270px
+  width: 100%
+
+.details
+  position: relative
+  padding: 17px 30px 16px 30px
+  max-width: 338px
+  width: 100%
+  +Text
+  background: linear-gradient(91.5deg, #8A80DE 0%, #FFFFFF 32.6%, #FFFFFF 69.99%, #E097EA 100%)
+  text-align: center
+  z-index: 5
+  transition: color 1s ease
+  &::before
+    content: ''
+    position: absolute
+    top: -1px
+    bottom: -1px
+    left: -1px
+    right: -1px
+    background: linear-gradient(91.5deg, #5349A8 0%, rgba(0, 0, 0, 0) 40.37%, rgba(13, 7, 14, 0) 63.75%, #944C9F 100%)
+    transition: opacity 1s ease
+    opacity: 1
+  &::after
+    content: 'Pesan'
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    display: flex
+    justify-content: center
+    align-items: center
+    text-align: center
+    transition: opacity 1s ease
+    background-color: #000
+    opacity: 1
+
+.sale
+  +S(14px)
+  font-weight: 300
+  color: #fff
+  &--date
+    font-weight: 500
+    color: #E94360

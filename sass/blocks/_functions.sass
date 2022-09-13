@@ -1,0 +1,120 @@
+.functions
+  background: url('../img/functions/background.jpg') no-repeat left / cover
+  &__container
+    position: relative
+    padding-top: 50px
+    padding-bottom: 111px
+    max-width: 1290px
+    display: flex
+    flex-direction: column
+  &-name
+    margin: 0 0 0 10px
+    +Text
+    text-transform: uppercase
+  &-title
+    position: relative
+    margin-top: 10px
+    margin-left: 12px
+    padding: 18px 0 17px 0
+    display: flex
+    flex-direction: column
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      left: 50%
+      transform: translateX(-50%)
+      width: 100vw
+      height: 1px
+      background-color: #fff
+      opacity: 0.3
+    &::after
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 50%
+      transform: translateX(-50%)
+      width: 100vw
+      height: 1px
+      background-color: #fff
+      opacity: 0.3
+    &__wrapper
+      margin-top: 12px
+      margin-right: 10px
+      padding-top: 23px
+      display: flex
+      align-items: baseline
+      align-self: flex-end
+    &__img
+      margin-right: 20px
+      width: 36px
+      height: 43px
+      fill: #fff
+    &__item
+      position: relative
+      +H2
+      color: #fff
+      text-transform: uppercase
+      &::after
+        content: ''
+        position: absolute
+        bottom: -18px
+        left: 50%
+        transform: translateX(-50%)
+        width: 100vw
+        height: 1px
+        background-color: #fff
+        opacity: 0.7
+      &--align-self
+        &::after
+          display: none
+  &-cards
+    margin-top: 60px
+    display: flex
+    justify-content: space-between
+    &__item
+      position: relative
+      padding: 26px 20px 10px 20px
+      display: flex
+      flex-direction: column
+      align-items: center
+      max-width: 300px
+      width: 100%
+      &-background
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        z-index: 0
+        &::before
+          content: ''
+          position: absolute
+          top: -1px
+          bottom: -1px
+          left: -1px
+          right: -1px
+          background: linear-gradient(91.5deg, #5349A8 0%, rgba(0, 0, 0, 0) 40.37%, rgba(13, 7, 14, 0) 63.75%, #944C9F 100%)
+          transition: opacity 1s ease
+        &::after
+          content: ''
+          position: absolute
+          top: 0
+          left: 0
+          width: 100%
+          height: 100%
+          background-color: #000
+          opacity: 0.65
+      &-img
+        width: 50px
+        height: 50px
+        z-index: 5
+      &-title
+        margin: 12px 0 0 0
+        +Text
+        text-transform: uppercase
+        text-align: center
+        z-index: 5
+        width: 100%
+        &--margin
+          margin-top: 1px

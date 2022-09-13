@@ -1,0 +1,349 @@
+.product
+  background: url('../img/characteristic/background.jpg') no-repeat center / cover
+  &__container
+    padding-top: 50px
+    padding-bottom: 65px
+  &-name
+    margin: 0
+    +Text
+    text-transform: uppercase
+  &-title
+    position: relative
+    margin-top: 16px
+    padding: 17px 0 16px 0
+    display: flex
+    flex-direction: column
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      left: 50%
+      transform: translateX(-50%)
+      width: 100vw
+      height: 1px
+      background-color: #fff
+      opacity: 0.3
+    &::after
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 50%
+      transform: translateX(-50%)
+      width: 100vw
+      height: 1px
+      background-color: #fff
+      opacity: 0.3
+    &__wrapper
+      margin-top: 10px
+      padding-top: 23px
+      display: flex
+      align-items: baseline
+      align-self: flex-end
+    &__img
+      margin-right: 20px
+      width: 36px
+      height: 43px
+      fill: #fff
+    &__item
+      position: relative
+      +H2
+      color: #fff
+      text-transform: uppercase
+      &::after
+        content: ''
+        position: absolute
+        bottom: -16px
+        left: 50%
+        transform: translateX(-50%)
+        width: 100vw
+        height: 1px
+        background-color: #fff
+        opacity: 0.7
+      &--align-self
+        &::after
+          display: none
+  &-cards
+    margin-top: 136px
+    display: flex
+    justify-content: flex-end
+  &-card
+    position: relative
+    margin-left: 168px
+    padding: 50px 24px 22px 32px
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+    max-width: 468px
+    width: 100%
+    background: rgba(255, 255, 255, 0.05)
+    backdrop-filter: blur(10px)
+    &:nth-child(2n + 1)
+      margin-left: 0
+    &__background
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      z-index: 0
+      &::before
+        content: ''
+        position: absolute
+        top: -1px
+        bottom: -1px
+        left: -1px
+        right: -1px
+        background: linear-gradient(91.5deg, #5349A8 0%, rgba(0, 0, 0, 0) 40.37%, rgba(13, 7, 14, 0) 63.75%, #944C9F 100%)
+        transition: opacity 1s ease
+      &::after
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background-color: rgba(0, 0, 0, 0.85)
+    &__info
+      width: 100%
+      display: flex
+      flex-direction: column
+      align-items: flex-end
+    &__list
+      margin: 5px 0 0 0
+      padding: 0
+      list-style: none
+      display: flex
+      align-items: center
+      justify-content: space-between
+      width: 100%
+      &:first-child
+        margin-top: 0
+      &-wrapper
+        position: relative
+        display: flex
+        flex-direction: column
+        max-width: 302px
+        width: 100%
+        z-index: 5
+      &-item
+        +Text
+    &__name
+      position: absolute
+      top: -77px
+      left: 50%
+      transform: translateX(-50%)
+      +S(48px)
+      color: #fff
+      width: 100%
+      text-align: center
+      font-weight: 300
+    &__colors
+      margin-top: 13px
+      display: flex
+      align-items: center
+      max-width: 302px
+      width: 100%
+      z-index: 5
+      &-text
+        margin-right: 24px
+        +Text
+      &-item
+        position: relative
+        margin-right: 12px
+        width: 20px
+        height: 20px
+        border-radius: 50%
+        cursor: pointer
+        &:last-child
+          margin-right: 0
+        &::after
+          content: ''
+          position: absolute
+          top: 50%
+          left: 50%
+          transform: translate(-50%, -50%)
+          width: 26px
+          height: 26px
+          border-radius: 50%
+          border: 2px solid #ACACAC
+          transition: opacity 0.7s ease
+          opacity: 0
+        &--active
+          &::after
+            opacity: 1
+        &--13
+          &-White
+            background-color: #fff
+          &-Pink
+            background-color: #FF7EEA
+          &-Black
+            background-color: #2E2E2E
+        &--13Pro
+          &-White
+            background-color: #fff
+          &-Gold
+            background-color: #FFA944
+          &-Black
+            background-color: #2E2E2E
+    &__price
+      margin-top: 20px
+      display: flex
+      justify-content: space-between
+      align-items: center
+      max-width: 302px
+      width: 100%
+      z-index: 5
+      &-text
+        +Text
+      &-item
+        +S(24px)
+        font-weight: 500
+        color: #E94360
+    &__form
+      margin-top: 47px
+      margin-right: 5px
+      display: flex
+      justify-content: space-between
+      width: 100%
+      z-index: 5
+    &__input
+      padding: 8px 15px 8px 15px
+      width: 100%
+      opacity: 0.9
+      border: 1px solid #fff
+      transition: opacity 0.3s ease
+      +Text
+      &::placeholder
+        +Text
+      &:focus
+        opacity: 1
+      &-wrapper
+        position: relative
+        max-width: 170px
+        width: 100%
+    &__button
+      position: relative
+      width: 47px
+      height: 38px
+      border-radius: 5px
+      background-color: #fff
+      fill: #300096
+      &-icon
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        width: 26px
+        height: 24px
+        fill: inherit
+    &__iphone
+      position: absolute
+      top: -170vh
+      left: -131px
+      width: 254px
+      opacity: 0
+      transition: top 0.8s ease, left 0.8s ease, opacity 0.8s ease
+      &--active
+        top: -95px
+        opacity: 1
+  &-gallery
+    margin-top: 107px
+    &__title
+      margin-top: 10px
+      padding: 14px 0 13px 0
+      &-wrapper
+        margin-top: 0
+        padding-top: 0
+    &__wrapper
+      margin-left: auto
+      margin-right: 28px
+      display: flex
+      flex-direction: column
+      max-width: 1147px
+      width: 100%
+    &__cards
+      display: flex
+      justify-content: space-between
+      z-index: 5
+      &--1
+        margin-top: 84px
+    &__card
+      display: flex
+      flex-direction: column
+      align-items: center
+      width: 100%
+      &--1
+        max-width: 510px
+      &--2
+        max-width: 510px
+      &--3
+        margin-top: 125px
+        max-width: 694px
+      &--4
+        margin-top: 205px
+        max-width: 295px
+      &-rectangle
+        position: relative
+        width: 100%
+        &--1
+          margin-bottom: 43px
+          height: 255px
+        &--2
+          margin-bottom: 43px
+          height: 254px
+        &--3
+          margin-bottom: 20px
+          height: 387px
+        &--4
+          margin-bottom: 20px
+          height: 307px
+        &--background
+          position: absolute
+          top: 0
+          left: 0
+          width: 100%
+          height: 100%
+          z-index: 0
+          &::before
+            content: ''
+            position: absolute
+            top: -1px
+            bottom: -1px
+            left: -1px
+            right: -1px
+            background: linear-gradient(91.5deg, #5349A8 0%, rgba(0, 0, 0, 0) 40.37%, rgba(13, 7, 14, 0) 63.75%, #944C9F 100%)
+            transition: opacity 1s ease
+            opacity: 0.7
+          &::after
+            content: ''
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            background-color: rgba(0, 0, 0, 0.7)
+      &-photo
+        position: absolute
+        z-index: 6
+        &--1
+          bottom: 0
+          right: 0
+          width: 548px
+        &--2
+          top: 0
+          right: 0
+          width: 536px
+        &--3
+          bottom: 0
+          right: 0
+          width: 670px
+        &--4
+          bottom: 0
+          left: 50%
+          transform: translateX(-50%)
+          width: 143px
+      &-description
+        margin: 0
+        +Text
+        text-align: center
+        width: 100%
